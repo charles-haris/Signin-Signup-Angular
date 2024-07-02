@@ -1,2 +1,33 @@
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
+
+<div class="album py-5 bg-body-tertiary">
+  <div class="container">
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col" *ngFor="let product of products" >
+        <div class="card shadow-sm">
+        <img class="bd-placeholder-img card-img-top object-fit-cover"  [src]="product.product_img" alt="" height="225px" >
+
+          <div class="card-body">
+            <p class="card-text"> {{product.product_name}} </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">+1</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
+              </div>
+              <small class=" bg-danger text-white py-2 px-4 rounded">$ {{product.product_price}}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
