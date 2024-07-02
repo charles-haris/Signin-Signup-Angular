@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
+  username:any
+  password:any
+  login( form:any){
+    this.password = form.value.password
+    this.username = form.value.username
+    alert(`Username : ${this.username} | Password : ${this.password}`)
+  }
 
 }
